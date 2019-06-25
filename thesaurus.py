@@ -1,4 +1,5 @@
 import random
+import sys
 
 class Dictionary:
     def __init__(self):
@@ -72,4 +73,7 @@ def replace_synonyms(text, frequency):
     return "".join(separated_text)
 
 if __name__ == "__main__":
-    print(replace_synonyms(input(), 1))
+    text = open(sys.argv[1], "r").read()
+
+    print(replace_synonyms(text, 1))
+
